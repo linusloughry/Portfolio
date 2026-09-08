@@ -79,12 +79,12 @@ if (filters) {
       chip.classList.add('active');
 
       const filterValue = chip.dataset.filter;
-      const cards = grid.querySelectorAll('.card');
-      cards.forEach(card => {
-        if (filterValue === 'all' || card.dataset.category === filterValue) {
-          card.style.display = 'flex';
+      const items = grid.querySelectorAll('.video-item, .photo-item, .card');
+      items.forEach(item => {
+        if (filterValue === 'all' || item.dataset.category === filterValue) {
+          item.style.display = '';
         } else {
-          card.style.display = 'none';
+          item.style.display = 'none';
         }
       });
     });
