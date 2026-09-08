@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo — Jordan Rivera</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mode-dark">
+
+  <div class="topbar">
+    <a href="index.html" class="logo">JORDAN RIVERA</a>
+    <div class="nav">
+      <a href="video.html">Video</a>
+      <a href="photo.html">Photo</a>
+      <a href="writing.html">Writing</a>
+    </div>
+  </div>
+
+  <!-- REPLACE: featured slideshow — Jordan's best shots. Large, one at a time,
+       click arrows/dots to advance. Autoplays (~3-4s) and stops permanently
+       on first user interaction. Minimal caption per photo. -->
+  <div class="slideshow" id="slideshow">
+    <div class="arrow" style="left:14px;" onclick="prevSlide()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width:16px;height:16px;"><path d="M15 18l-6-6 6-6"/></svg>
+    </div>
+    <div class="arrow" style="right:14px;" onclick="nextSlide()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width:16px;height:16px;"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <span style="font-size:13px; color:#6b7565;">Featured photo</span>
+    <div class="slideshow-caption" id="slide-caption">Caption goes here — subject, location, date</div>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <!-- REPLACE: filter categories — placeholder (Portraits/Moments/Sports),
+       pending Jordan's final photo selection. -->
+  <div class="filters" id="filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="portraits">Portraits</button>
+    <button class="chip" data-filter="moments">Moments</button>
+    <button class="chip" data-filter="sports">Sports</button>
+  </div>
+
+  <!-- REPLACE: real photo thumbnails, masonry sizing handles mixed orientation -->
+  <div class="grid" id="photo-grid">
+    <div class="card" style="grid-column: span 2; height: 90px;" data-category="portraits">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8fa38a" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="card" style="grid-row: span 2; height: 190px;" data-category="moments">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8fa38a" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="card" style="height: 90px;" data-category="sports">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8fa38a" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="card" style="height: 90px;" data-category="portraits">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8fa38a" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="card" style="grid-column: span 2; height: 90px;" data-category="moments">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8fa38a" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+  </div>
+
+  <div style="height: 60px;"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
